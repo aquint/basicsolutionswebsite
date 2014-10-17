@@ -91,7 +91,9 @@ hr{
   margin-top: 35px;
   margin-bottom: 35px;
 }
-
+#webdesign ul{
+  display: inline-block;
+}
 /****************************/
 /********CONTACT BAR*********/
 
