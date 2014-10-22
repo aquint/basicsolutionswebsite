@@ -19,7 +19,7 @@ development:
   encoding: unicode
   database: basic_development
   pool: 5
-  username: HxC
+  username: sampleuser
   password: lol
   host: localhost
   # Connect on a TCP socket. Omitted by default since the client uses a
@@ -48,7 +48,7 @@ test:
   encoding: unicode
   database: basic_test
   pool: 5
-  username: HxC
+  username: sampleuser
   password: lol
 
 production:
