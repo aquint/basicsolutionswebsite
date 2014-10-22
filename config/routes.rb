@@ -1,7 +1,7 @@
 Basic::Application.routes.draw do
   root 'static_pages#home'
   get 'services'    => 'static_pages#services'
-  get 'contact' => 'static_pages#contact'
+  get 'contact' => 'msgs#new'
   match '/send_mail', to: 'contact_controller#send_mail', via: 'post'
   resources :msgs 
   # The priority is based upon order of creation: first created -> highest priority.

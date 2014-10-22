@@ -51,6 +51,7 @@ test:
   username: sampleuser
   password: lol
 
+
 production:
   adapter: postgresql
   encoding: unicode

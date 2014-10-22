@@ -12,9 +12,9 @@
     </div>
     <div class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
-        <li><a class="nav-items" href="/">Home</a></li>
-        <li><a class="nav-items" href="services">Services</a></li>
-        <li><a class="nav-items" href="msgs/new">Contact</a></li>
+        <li><%= link_to "Home", root_url, class: "nav-items" %></li>
+        <li><%= link_to "Services", services_path, class: "nav-items" %></li>
+        <li><%= link_to "Contact", new_msg_path, class: "nav-items" %></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
           <li><a href="#"><i class="fa fa-facebook-square fa-2x"></i></a></li>

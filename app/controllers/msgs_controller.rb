@@ -1,6 +1,6 @@
 class MsgsController < ApplicationController
 	http_basic_authenticate_with name: "admin", password: "secret", except:
-	[:create, :new, :show]
+	[:create, :new]
 	def new
 		@msg = Msg.new
 	end
@@ -12,8 +12,14 @@ class MsgsController < ApplicationController
 	end
 	def create
 		@msg = Msg.new(msg_params)
-		@msg.save
-		redirect_to @msg
+		if @msg.save
+			flash[:success] = "Post successful!"
+	      	redirect_to new_msg_path
+	    else
+	    	flash[:danger] = "Error, one or more fields incorrectly filled"
+	    	redirect_to new_msg_path
+		end
+		
 	end
 	def destroy
 		@msg = Msg.find(params[:id])
