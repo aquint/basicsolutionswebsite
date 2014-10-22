@@ -1,0 +1,20 @@
+<div style="height: 65px"></div>
+
+<table style="width:50%">
+  <tr>
+    <th>name</th>
+    <th>email</th>
+	<th>comments</th>
+    <th colspan="2"></th>
+  </tr>
+ 
+<% @msgs.each do |msg| %>
+  <tr>
+    <td><%= msg.name %></td>
+    <td><%= msg.email %></td>
+	<td><%= msg.comments %></td>
+    <td><%= link_to 'Show', msg_path(msg) %></td>
+	<td><%= link_to 'Destroy', 	msg_path(msg), method: :delete %> 
+  </tr>
+<% end %>
+</table>

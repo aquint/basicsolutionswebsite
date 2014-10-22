@@ -191,3 +191,8 @@ form{
     font-family: Helvetica, sans-serif;
   }
 }
+.text p{
+color: red;
+font-size: 30px;
+text-align: center;
+}
